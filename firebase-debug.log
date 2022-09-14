@@ -1,0 +1,64 @@
+[debug] [2022-09-11T12:19:39.892Z] ----------------------------------------------------------------------
+[debug] [2022-09-11T12:19:39.894Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hee75\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2022-09-11T12:19:39.894Z] CLI Version:   11.0.1
+[debug] [2022-09-11T12:19:39.894Z] Platform:      win32
+[debug] [2022-09-11T12:19:39.894Z] Node Version:  v18.0.0
+[debug] [2022-09-11T12:19:39.895Z] Time:          Sun Sep 11 2022 21:19:39 GMT+0900 (日本標準時)
+[debug] [2022-09-11T12:19:39.896Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-11T12:19:39.968Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-11T12:19:39.968Z] > authorizing via signed-in user (jngmtpmdgaugad@gmail.com)
+[debug] [2022-09-11T12:19:39.968Z] [iam] checking project hasura-auth-82224 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2022-09-11T12:19:39.970Z] > refreshing access token with scopes: []
+[debug] [2022-09-11T12:19:39.971Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-09-11T12:19:40.233Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 11 Sep 2022 12:19:38 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-09-11T12:19:40.250Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hasura-auth-82224:testIamPermissions [none]
+[debug] [2022-09-11T12:19:40.250Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hasura-auth-82224:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-09-11T12:19:41.011Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hasura-auth-82224:testIamPermissions 200
+[debug] [2022-09-11T12:19:41.011Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hasura-auth-82224:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-09-11T12:19:41.011Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/hasura-auth-82224/serviceAccounts/hasura-auth-82224@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-09-11T12:19:41.011Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/hasura-auth-82224/serviceAccounts/hasura-auth-82224@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-09-11T12:19:41.255Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/hasura-auth-82224/serviceAccounts/hasura-auth-82224@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-09-11T12:19:41.255Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/hasura-auth-82224/serviceAccounts/hasura-auth-82224@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'hasura-auth-82224'...
+[info] 
+[info] i  deploying functions 
+[debug] [2022-09-11T12:19:41.263Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hasura-auth-82224 [none]
+[debug] [2022-09-11T12:19:41.617Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hasura-auth-82224 200
+[debug] [2022-09-11T12:19:41.618Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hasura-auth-82224 {"projectId":"hasura-auth-82224","projectNumber":"142152913280","displayName":"hasura-auth","name":"projects/hasura-auth-82224","resources":{"hostingSite":"hasura-auth-82224","storageBucket":"hasura-auth-82224.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_385c00f8-05c9-4c97-be3a-f2492a771fa4"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2022-09-11T12:19:41.629Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-09-11T12:19:41.639Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-09-11T12:19:41.645Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudbuild.googleapis.com [none]
+[debug] [2022-09-11T12:19:41.649Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/artifactregistry.googleapis.com [none]
+[debug] [2022-09-11T12:19:42.688Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/runtimeconfig.googleapis.com 200
+[debug] [2022-09-11T12:19:42.688Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-09-11T12:19:42.717Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudfunctions.googleapis.com 200
+[debug] [2022-09-11T12:19:42.717Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-09-11T12:19:42.733Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/artifactregistry.googleapis.com 200
+[debug] [2022-09-11T12:19:42.733Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/artifactregistry.googleapis.com [omitted]
+[debug] [2022-09-11T12:19:42.750Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudbuild.googleapis.com 200
+[debug] [2022-09-11T12:19:42.750Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2022-09-11T12:19:42.751Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2022-09-11T12:19:44.061Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudbuild.googleapis.com:enable 200
+[debug] [2022-09-11T12:19:44.061Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2022-09-11T12:19:54.073Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudbuild.googleapis.com [none]
+[debug] [2022-09-11T12:19:55.080Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudbuild.googleapis.com 200
+[debug] [2022-09-11T12:19:55.080Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hasura-auth-82224/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-09-11T12:19:55.089Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hasura-auth-82224/adminSdkConfig [none]
+[debug] [2022-09-11T12:19:55.436Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hasura-auth-82224/adminSdkConfig 200
+[debug] [2022-09-11T12:19:55.438Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hasura-auth-82224/adminSdkConfig {"projectId":"hasura-auth-82224","storageBucket":"hasura-auth-82224.appspot.com","locationId":"us-central"}
+[debug] [2022-09-11T12:19:55.440Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hasura-auth-82224/configs [none]
+[debug] [2022-09-11T12:19:55.902Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hasura-auth-82224/configs 200
+[debug] [2022-09-11T12:19:55.902Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hasura-auth-82224/configs {"configs":[{"name":"projects/hasura-auth-82224/configs/hasura"}]}
+[debug] [2022-09-11T12:19:55.903Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hasura-auth-82224/configs/hasura/variables [none]
+[debug] [2022-09-11T12:19:56.248Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hasura-auth-82224/configs/hasura/variables 200
+[debug] [2022-09-11T12:19:56.248Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hasura-auth-82224/configs/hasura/variables {"variables":[{"name":"projects/hasura-auth-82224/configs/hasura/variables/admin_secret","updateTime":"2022-09-11T09:47:07.553208881Z"},{"name":"projects/hasura-auth-82224/configs/hasura/variables/url","updateTime":"2022-09-11T09:47:08.833770680Z"}]}
+[debug] [2022-09-11T12:19:56.249Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hasura-auth-82224/configs/hasura/variables/admin_secret [none]
+[debug] [2022-09-11T12:19:56.255Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hasura-auth-82224/configs/hasura/variables/url [none]
